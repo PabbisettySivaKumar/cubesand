@@ -1,0 +1,76 @@
+.footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-sand);
+  padding-top: var(--spacing-3xl);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  color: white;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  color: var(--color-stone-light);
+  line-height: 1.6;
+}
+
+.heading {
+  color: white;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.link {
+  color: var(--color-stone-light);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-stone-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.bottomBar {
+  background-color: #111827; /* Darker charcoal */
+  padding: var(--spacing-md) 0;
+  color: var(--color-stone-gray);
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
