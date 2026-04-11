@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CubeSand Website
 
-## Getting Started
+Welcome to the official repository for the **CubeSand** stone crushing and aggregate supply business website. This project is a modern, responsive, and fast brochure website built to give stakeholders and customers a premium digital experience.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: Next.js 15+ (App Router)
+- **Styling**: Vanilla CSS (CSS Modules for Component Isolation, `globals.css` for Design System Variables)
+- **Language**: TypeScript
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Structure
+- `src/app/` - Contains all Next.js page routes (`page.tsx`) including Home, About, Products, Infrastructure, Compliance, and Contact.
+- `src/components/` - Contains reusable UI components like `NavBar.tsx` and `Footer.tsx` alongside their respective CSS modules.
+- `public/` - Contains static assets like generated AI placeholder imagery (`/images/`), and the custom branded `cubesand.ico` and `cubesand.png` files.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Ongoing Changelog
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+We are keeping a running log of all adjustments and features added throughout the development process:
 
-## Learn More
+### Phase 1: Core Build & Branding
+- **Initial Setup**: Bootstrapped Next.js application, purged boilerplate layout, and established the master `RootLayout`.
+- **Design System**: Created `globals.css` bringing in the `Inter` font, standardized layout utilities (`.container`, `.grid-responsive`), and configured a premium charcoal and sand color palette.
+- **Routing & Pages**: Engineered 6 primary pages mapping to the project PRD:
+  - `/` (Home)
+  - `/about` (Heritage & Service Regions)
+  - `/products` (Types of Aggregates)
+  - `/infrastructure` (Crushers & Logistics)
+  - `/compliance` (Environment & QA)
+  - `/contact` (Interactive Quote Form & Support Data)
+- **Component Engineering**: Built `NavBar` (with mobile hamburger toggle) and `Footer` global layout wrappers.
+- **Rebranding Phase**: 
+  - Overhauled all metadata, text, and titles from "Apex Crushers" to "CubeSand".
+  - Connected up verified sales contact numbers (`+91-9562347777`) and email routes (`sufiyan@cubicsglobal.in`).
+  - Integrated dynamic WhatsApp chat links across primary CTAs.
+- **Visual Assets**:
+  - Implemented AI-generated placeholder images for the rock aggregates, crushing plant, and stockyard.
+  - Generated and installed a custom 3D stone cube logo (`cubesand.png` and `cubesand.ico`) across all application instances.
+- **Optimization**:
+  - Fixed Next.js `<Image>` performance warnings by dynamically injecting standard responsive `sizes="(max-width: 768px) 100vw, ..."` configurations on all layout wrappers.
+  - Removed outdated unused Vercel/Next templates from the `/public` root.
+- **Source Control**: Initialized local git repository and executed the first total project commit.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*(More updates to be appended here as work progresses)*

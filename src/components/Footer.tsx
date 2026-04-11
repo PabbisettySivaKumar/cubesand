@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.column}>
           <h3 className={styles.brand} style={{ display: 'flex', alignItems: 'center' }}>
             <img src="/cubesand.png" alt="CubeSand Logo" width="32" height="32" style={{marginRight: '12px', borderRadius: '4px'}} />
-            CubeSand
+            CUBESAND
           </h3>
           <p className={styles.description}>
             Leading supplier of high-quality stone aggregates, M-sand, and crusher dust for infrastructure and civil construction projects.

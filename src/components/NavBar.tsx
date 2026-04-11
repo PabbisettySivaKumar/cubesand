@@ -11,7 +11,7 @@ const NavBar = () => {
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo}>
           <img src="/cubesand.png" alt="CubeSand Logo" width="32" height="32" style={{marginRight: '8px', borderRadius: '4px'}} />
-          CubeSand
+          CUBESAND
         </Link>
         
         {/* Desktop Menu */}
