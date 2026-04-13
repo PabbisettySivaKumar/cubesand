@@ -189,3 +189,38 @@ p {
     grid-template-columns: 7fr 5fr;
   }
 }
+
+/* Master Layout Utilities */
+.bg-charcoal { background-color: var(--color-charcoal); }
+.bg-sand { background-color: var(--color-sand); }
+.text-white { color: white; }
+.text-accent { color: var(--color-accent); }
+.text-center { text-align: center; }
+.text-gray { color: var(--color-stone-gray); }
+
+.flex-center { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+
+/* Card Utilities */
+.card {
+  border: 1px solid var(--color-sand-hover);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-background);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-padded {
+  padding: 24px;
+}

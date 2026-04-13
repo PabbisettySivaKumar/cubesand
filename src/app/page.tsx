@@ -1,123 +1,105 @@
-import React from 'react';
+import Image from "next/image";
 import Link from 'next/link';
-import Image from 'next/image';
+import ProductCard from '@/components/ProductCard';
 
 export default function Home() {
   return (
     <>
-      <section style={{
-        position: 'relative',
-        height: '600px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '0 20px',
-        overflow: 'hidden'
-      }}>
-        {/* Background Image with Overlay */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1 }}>
+      {/* Hero Section */}
+      <section className="bg-charcoal text-white" style={{ position: 'relative', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
           <Image 
             src="/images/stockyard.png" 
-            alt="Stockyard" 
+            alt="Stockyard Background" 
             fill 
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center' }} 
-            priority
+            style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.3 }} 
+            priority 
           />
-          <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(31, 41, 55, 0.7)' }}></div>
         </div>
-
-        <div className="container" style={{ textAlign: 'center', color: 'white', maxWidth: '800px', zIndex: 10 }}>
-          <h1 style={{ color: 'white', marginBottom: '20px' }}>Premium Quality Stone Aggregates for Reliable Infrastructure</h1>
+        <div className="container text-center" style={{ position: 'relative', zIndex: 10, maxWidth: '800px' }}>
+          <h1 className="text-white" style={{ marginBottom: '20px' }}>Premium Quality Stone Aggregates for Reliable Infrastructure</h1>
           <p style={{ color: '#e5e7eb', fontSize: '1.25rem', marginBottom: '40px' }}>
-            We supply M-Sand, P-Sand, and graded rock aggregates to top contractors, builders, and developers with unmatched quality and on-time delivery.
+            Operating one of the region&apos;s largest crushing facilities. We deliver precision-crushed M-Sand and construction aggregates for commercial, civil, and residential projects.
           </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="flex-center gap-md" style={{ flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn btn-primary" style={{ fontSize: '1.125rem', padding: '12px 32px' }}>
               Request a Quote
             </Link>
-            <Link href="/products" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-charcoal)', fontSize: '1.125rem', padding: '12px 32px' }}>
-              View Materials
+            <Link href="/products" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-charcoal)', fontSize: '1.125rem', padding: '12px 32px', borderRadius: 'var(--radius-md)', fontWeight: 600 }}>
+              View Our Products
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section style={{ backgroundColor: 'var(--color-charcoal)', color: 'white', padding: '40px 0' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '20px', textAlign: 'center' }}>
+      {/* Trust Bar */}
+      <section className="bg-charcoal text-white" style={{ padding: '40px 0', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="container flex-center" style={{ justifyContent: 'space-around', flexWrap: 'wrap', gap: '20px', textAlign: 'center' }}>
           <div>
-            <h3 style={{ color: 'var(--color-accent)', fontSize: '2.5rem', marginBottom: '8px' }}>20+</h3>
-            <p style={{ fontWeight: 600 }}>Years Expcrience</p>
+            <h3 className="text-accent" style={{ fontSize: '2.5rem', marginBottom: '8px' }}>20+</h3>
+            <p style={{ fontWeight: 600, margin: 0 }}>Years Experience</p>
           </div>
           <div>
-            <h3 style={{ color: 'var(--color-accent)', fontSize: '2.5rem', marginBottom: '8px' }}>2M+</h3>
-            <p style={{ fontWeight: 600 }}>Tons Delivered</p>
+            <h3 className="text-accent" style={{ fontSize: '2.5rem', marginBottom: '8px' }}>2M+</h3>
+            <p style={{ fontWeight: 600, margin: 0 }}>Tons Delivered</p>
           </div>
           <div>
-            <h3 style={{ color: 'var(--color-accent)', fontSize: '2.5rem', marginBottom: '8px' }}>50+</h3>
-            <p style={{ fontWeight: 600 }}>Fleet Trucks</p>
+            <h3 className="text-accent" style={{ fontSize: '2.5rem', marginBottom: '8px' }}>50+</h3>
+            <p style={{ fontWeight: 600, margin: 0 }}>Fleet Trucks</p>
           </div>
           <div>
-            <h3 style={{ color: 'var(--color-accent)', fontSize: '2.5rem', marginBottom: '8px' }}>100%</h3>
-            <p style={{ fontWeight: 600 }}>Quality Compliant</p>
+            <h3 className="text-accent" style={{ fontSize: '2.5rem', marginBottom: '8px' }}>100%</h3>
+            <p style={{ fontWeight: 600, margin: 0 }}>Quality Compliant</p>
           </div>
         </div>
       </section>
 
-      {/* Products Highlights */}
+      {/* Featured Products */}
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <h2>Our Materials</h2>
-            <p>High-grade outputs tuned for concrete mixes and heavy foundation works.</p>
+          <div className="text-center" style={{ marginBottom: '40px' }}>
+            <h2>Core Products</h2>
+            <p>Engineered for strength and consistency.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-            {/* Card 1 */}
-            <div style={{ border: '1px solid var(--color-sand-hover)', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ position: 'relative', height: '240px' }}>
-                <Image src="/images/aggregate.png" alt="20mm Aggregate" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
-              </div>
-              <div style={{ padding: '24px' }}>
-                <h3>20mm Aggregate</h3>
-                <p>Perfect for ready-mix concrete and roof slab casting.</p>
-                <Link href="/contact" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Enquire Now &rarr;</Link>
-              </div>
-            </div>
-            {/* Card 2 */}
-            <div style={{ border: '1px solid var(--color-sand-hover)', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ position: 'relative', height: '240px' }}>
-                <Image src="/images/aggregate.png" alt="40mm Aggregate" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover', filter: 'grayscale(0.3)' }} />
-              </div>
-              <div style={{ padding: '24px' }}>
-                <h3>40mm Aggregate</h3>
-                <p>The standard choice for railway blast and road base.</p>
-                <Link href="/contact" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Enquire Now &rarr;</Link>
-              </div>
-            </div>
-            {/* Card 3 */}
-            <div style={{ border: '1px solid var(--color-sand-hover)', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ position: 'relative', height: '240px' }}>
-                <Image src="/images/aggregate.png" alt="M-Sand" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover', filter: 'sepia(0.2)' }} />
-              </div>
-              <div style={{ padding: '24px' }}>
-                <h3>M-Sand</h3>
-                <p>Manufactured sand ideal for strong brickwork and concrete.</p>
-                <Link href="/contact" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Enquire Now &rarr;</Link>
-              </div>
-            </div>
+            <ProductCard 
+              title="20mm Aggregate" 
+              imageUrl="/images/aggregate.png"
+              actionText="Enquire Now"
+            >
+              Essential for ready-mix concrete, foundations, and robust pillars.
+            </ProductCard>
+
+            <ProductCard 
+              title="40mm Aggregate" 
+              imageUrl="/images/aggregate.png"
+              imageFilter="grayscale(0.3)"
+              actionText="Enquire Now"
+            >
+              Heavy-duty aggregate for road bases, railway ballast, and mass concrete.
+            </ProductCard>
+
+            <ProductCard 
+              title="M-Sand" 
+              imageUrl="/images/aggregate.png"
+              imageFilter="sepia(0.2)"
+              actionText="Enquire Now"
+            >
+              Eco-friendly manufactured sand with perfect cubical shape for supreme bonding.
+            </ProductCard>
           </div>
         </div>
       </section>
 
-      {/* Plant Preview */}
-      <section className="section" style={{ backgroundColor: 'var(--color-sand)' }}>
+      {/* Infrastructure Highlight */}
+      <section className="section bg-sand">
         <div className="container">
           <div className="grid-responsive">
             <div>
               <h2>State-of-the-art Infrastructure</h2>
               <p>Our heavy-duty crushing plants process up to 500 tons per hour, ensuring that high-volume orders are fulfilled effortlessly. Built with top-tier multi-stage crushers and extensive conveyor networks to maintain consistency.</p>
-              <ul style={{ marginBottom: '24px', listStyleType: 'disc', marginLeft: '20px', color: 'var(--color-stone-gray)'}}>
+              <ul style={{ marginBottom: '24px', listStyleType: 'disc', marginLeft: '20px' }} className="text-gray">
                 <li style={{ marginBottom: '8px' }}>Tertiary VSI Crushers for precise M-Sand cubical shape.</li>
                 <li style={{ marginBottom: '8px' }}>Large Stockyards scaling up to 100,000 tons.</li>
                 <li style={{ marginBottom: '8px' }}>Automated Weighbridges for exact fleet dispatching.</li>
@@ -131,11 +113,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section" style={{ textAlign: 'center' }}>
+      <section className="section text-center">
         <div className="container" style={{ maxWidth: '600px' }}>
           <h2>Ready to order?</h2>
           <p style={{ marginBottom: '32px' }}>Our dedicated dispatch team works around the clock to meet your crucial project deadlines.</p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+          <div className="flex-center gap-md">
             <Link href="/contact" className="btn btn-primary">Enquire Online</Link>
             <a href="https://wa.me/919562347777" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               WhatsApp Us
