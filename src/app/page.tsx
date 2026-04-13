@@ -122,7 +122,6 @@ export default function Home() {
                 <li style={{ marginBottom: '8px' }}>Large Stockyards scaling up to 100,000 tons.</li>
                 <li style={{ marginBottom: '8px' }}>Automated Weighbridges for exact fleet dispatching.</li>
               </ul>
-              <Link href="/infrastructure" className="btn btn-outline" style={{ padding: '10px 24px' }}>Take a Plant Tour</Link>
             </div>
             <div style={{ position: 'relative', height: '400px', borderRadius: '16px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
               <Image src="/images/stone_crusher.png" alt="Crushing Plant" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
