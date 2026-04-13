@@ -46,20 +46,12 @@ export default function ContactPage() {
                         <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Name *</label>
                         <input type="text" required style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem' }} />
                       </div>
-                      <div style={{ flex: '1 1 200px' }}>
-                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Company Name</label>
-                        <input type="text" style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem' }} />
-                      </div>
                     </div>
 
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                       <div style={{ flex: '1 1 200px' }}>
                         <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Phone Number *</label>
                         <input type="tel" required style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem' }} />
-                      </div>
-                      <div style={{ flex: '1 1 200px' }}>
-                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Project Location *</label>
-                        <input type="text" required style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem' }} />
                       </div>
                     </div>
 
@@ -75,12 +67,7 @@ export default function ContactPage() {
                           <option>Multiple Materials</option>
                         </select>
                       </div>
-                      <div style={{ flex: '1 1 200px' }}>
-                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Approx. Quantity (Tons)</label>
-                        <input type="number" style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem' }} />
-                      </div>
                     </div>
-
                     <div>
                       <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500 }}>Message</label>
                       <textarea rows={4} style={{ width: '100%', padding: '12px', border: '1px solid var(--color-sand-hover)', borderRadius: '8px', fontSize: '1rem', resize: 'vertical' }}></textarea>
